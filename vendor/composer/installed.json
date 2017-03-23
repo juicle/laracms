@@ -3443,5 +3443,720 @@
             "testing",
             "xunit"
         ]
+    },
+    {
+        "name": "hieu-le/active",
+        "version": "3.4.0",
+        "version_normalized": "3.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/letrunghieu/active.git",
+            "reference": "6d98ba8a1b779ef545cae585572f392f3f56ffd5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/letrunghieu/active/zipball/6d98ba8a1b779ef545cae585572f392f3f56ffd5",
+            "reference": "6d98ba8a1b779ef545cae585572f392f3f56ffd5",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "^5.0",
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "dev-master",
+            "mockery/mockery": "dev-master",
+            "orchestra/testbench": "^3.1",
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2017-02-15 03:04:16",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "HieuLe\\Active\\": "src/",
+                "HieuLe\\ActiveTest\\": "tests/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Hieu Le",
+                "email": "letrunghieu.cse09@gmail.com",
+                "homepage": "https://www.hieule.info"
+            }
+        ],
+        "description": "The helper class for Laravel (4/5) applications to get active class base on current route",
+        "homepage": "https://www.hieule.info/tag/laravel-active/",
+        "keywords": [
+            "active",
+            "laravel",
+            "routing"
+        ]
+    },
+    {
+        "name": "arcanedev/support",
+        "version": "3.21.4",
+        "version_normalized": "3.21.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ARCANEDEV/Support.git",
+            "reference": "a4913355a537c71b22899ee9b932dbeb5ed229a9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/a4913355a537c71b22899ee9b932dbeb5ed229a9",
+            "reference": "a4913355a537c71b22899ee9b932dbeb5ed229a9",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/filesystem": "~5.0",
+            "illuminate/support": "~5.0",
+            "php": ">=5.6.4"
+        },
+        "require-dev": {
+            "phpunit/phpcov": "~3.0",
+            "phpunit/phpunit": "~5.0"
+        },
+        "time": "2017-03-21 16:12:55",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Arcanedev\\Support\\": "src/"
+            },
+            "files": [
+                "constants.php",
+                "helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ARCANEDEV",
+                "email": "arcanedev.maroc@gmail.com",
+                "homepage": "https://github.com/arcanedev-maroc"
+            }
+        ],
+        "description": "ARCANEDEV Support Helpers",
+        "homepage": "https://github.com/ARCANEDEV/Support",
+        "keywords": [
+            "arcanedev",
+            "arcanesoft",
+            "laravel",
+            "support"
+        ]
+    },
+    {
+        "name": "arcanedev/log-viewer",
+        "version": "4.3.1",
+        "version_normalized": "4.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ARCANEDEV/LogViewer.git",
+            "reference": "7cad75841bd9304bccd90cd670dca0fc23c56a28"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ARCANEDEV/LogViewer/zipball/7cad75841bd9304bccd90cd670dca0fc23c56a28",
+            "reference": "7cad75841bd9304bccd90cd670dca0fc23c56a28",
+            "shasum": ""
+        },
+        "require": {
+            "arcanedev/support": "~3.20",
+            "php": ">=5.6",
+            "psr/log": "~1.0"
+        },
+        "require-dev": {
+            "phpunit/phpcov": "~3.0",
+            "phpunit/phpunit": "~5.0"
+        },
+        "time": "2017-01-31 12:03:39",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Arcanedev\\LogViewer\\": "src/"
+            },
+            "files": [
+                "constants.php",
+                "helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ARCANEDEV",
+                "email": "arcanedev.maroc@gmail.com",
+                "homepage": "https://github.com/arcanedev-maroc",
+                "role": "Developer"
+            }
+        ],
+        "description": "Provides a Log Viewer for Laravel 5",
+        "homepage": "https://github.com/ARCANEDEV/LogViewer",
+        "keywords": [
+            "arcanedev",
+            "arcanesoft",
+            "laravel",
+            "log",
+            "log viewer",
+            "log-viewer",
+            "logviewer"
+        ]
+    },
+    {
+        "name": "psr/http-message",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06 14:39:51",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP messages",
+        "homepage": "https://github.com/php-fig/http-message",
+        "keywords": [
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
+        ]
+    },
+    {
+        "name": "arcanedev/no-captcha",
+        "version": "3.2.2",
+        "version_normalized": "3.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ARCANEDEV/noCAPTCHA.git",
+            "reference": "1c3145f063c8a2f72b855d41bc689d35653887f4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ARCANEDEV/noCAPTCHA/zipball/1c3145f063c8a2f72b855d41bc689d35653887f4",
+            "reference": "1c3145f063c8a2f72b855d41bc689d35653887f4",
+            "shasum": ""
+        },
+        "require": {
+            "arcanedev/support": "~3.20",
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.6.4",
+            "psr/http-message": "~1.0"
+        },
+        "require-dev": {
+            "arcanedev/laravel-html": "~5.0",
+            "phpunit/phpcov": "~3.0",
+            "phpunit/phpunit": "~5.0"
+        },
+        "time": "2017-03-13 16:53:40",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Arcanedev\\NoCaptcha\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ARCANEDEV",
+                "email": "arcanedev.maroc@gmail.com",
+                "homepage": "https://github.com/arcanedev-maroc",
+                "role": "Developer"
+            }
+        ],
+        "description": "No CAPTCHA (new Google reCAPTCHA) with Laravel support",
+        "homepage": "https://github.com/ARCANEDEV/noCAPTCHA",
+        "keywords": [
+            "arcanedev",
+            "captcha",
+            "google",
+            "laravel",
+            "no-captcha",
+            "recaptcha"
+        ]
+    },
+    {
+        "name": "maximebf/debugbar",
+        "version": "1.13.1",
+        "version_normalized": "1.13.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maximebf/php-debugbar.git",
+            "reference": "afee79a236348e39a44cb837106b7c5b4897ac2a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/afee79a236348e39a44cb837106b7c5b4897ac2a",
+            "reference": "afee79a236348e39a44cb837106b7c5b4897ac2a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/log": "^1.0",
+            "symfony/var-dumper": "^2.6|^3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0|^5.0"
+        },
+        "suggest": {
+            "kriswallsmith/assetic": "The best way to manage assets",
+            "monolog/monolog": "Log using Monolog",
+            "predis/predis": "Redis storage"
+        },
+        "time": "2017-01-05 08:46:19",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.13-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DebugBar\\": "src/DebugBar/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Maxime Bouroumeau-Fuseau",
+                "email": "maxime.bouroumeau@gmail.com",
+                "homepage": "http://maximebf.com"
+            },
+            {
+                "name": "Barry vd. Heuvel",
+                "email": "barryvdh@gmail.com"
+            }
+        ],
+        "description": "Debug bar in the browser for php application",
+        "homepage": "https://github.com/maximebf/php-debugbar",
+        "keywords": [
+            "debug",
+            "debugbar"
+        ]
+    },
+    {
+        "name": "barryvdh/laravel-debugbar",
+        "version": "v2.3.2",
+        "version_normalized": "2.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/barryvdh/laravel-debugbar.git",
+            "reference": "24e4f0261e352d3fd86d0447791b56ae49398674"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/24e4f0261e352d3fd86d0447791b56ae49398674",
+            "reference": "24e4f0261e352d3fd86d0447791b56ae49398674",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*",
+            "maximebf/debugbar": "~1.13.0",
+            "php": ">=5.5.9",
+            "symfony/finder": "~2.7|~3.0"
+        },
+        "time": "2017-01-19 08:19:49",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Barryvdh\\Debugbar\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Barry vd. Heuvel",
+                "email": "barryvdh@gmail.com"
+            }
+        ],
+        "description": "PHP Debugbar integration for Laravel",
+        "keywords": [
+            "debug",
+            "debugbar",
+            "laravel",
+            "profiler",
+            "webprofiler"
+        ]
+    },
+    {
+        "name": "creativeorange/gravatar",
+        "version": "1.0.10",
+        "version_normalized": "1.0.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/creativeorange/gravatar.git",
+            "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
+            "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.*",
+            "php": ">=5.4.0"
+        },
+        "time": "2017-02-15 22:07:40",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Creativeorange\\Gravatar\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jaco Tijssen",
+                "email": "jaco@creativeorange.nl",
+                "homepage": "https://www.creativeorange.nl",
+                "role": "Developer"
+            }
+        ],
+        "description": "A Laravel 5.0, 5.1, 5.2 and 5.3 gravatar package for retrieving gravatar image URLs or checking the existance of an image.",
+        "keywords": [
+            "avatar",
+            "gravatar",
+            "laravel"
+        ]
+    },
+    {
+        "name": "davejamesmiller/laravel-breadcrumbs",
+        "version": "3.0.2",
+        "version_normalized": "3.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/davejamesmiller/laravel-breadcrumbs.git",
+            "reference": "6ca5a600003ecb52a5b5af14dad82033058604e1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/davejamesmiller/laravel-breadcrumbs/zipball/6ca5a600003ecb52a5b5af14dad82033058604e1",
+            "reference": "6ca5a600003ecb52a5b5af14dad82033058604e1",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.*",
+            "illuminate/view": "5.*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.9.*",
+            "orchestra/testbench": "3.2.*|3.3.*",
+            "phpunit/phpunit": "4.*",
+            "satooshi/php-coveralls": "0.6.*"
+        },
+        "time": "2017-01-30 21:16:53",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DaveJamesMiller\\Breadcrumbs\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT License"
+        ],
+        "authors": [
+            {
+                "name": "Dave James Miller",
+                "email": "dave@davejamesmiller.com",
+                "homepage": "https://davejamesmiller.com/"
+            }
+        ],
+        "description": "A simple Laravel-style way to create breadcrumbs in Laravel 4+.",
+        "homepage": "https://laravel-breadcrumbs.readthedocs.io/",
+        "keywords": [
+            "laravel"
+        ]
+    },
+    {
+        "name": "laravelcollective/html",
+        "version": "v5.4.1",
+        "version_normalized": "5.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/LaravelCollective/html.git",
+            "reference": "7570f25d58a00fd6909c0563808590f9cdb14d47"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/LaravelCollective/html/zipball/7570f25d58a00fd6909c0563808590f9cdb14d47",
+            "reference": "7570f25d58a00fd6909c0563808590f9cdb14d47",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/http": "5.4.*",
+            "illuminate/routing": "5.4.*",
+            "illuminate/session": "5.4.*",
+            "illuminate/support": "5.4.*",
+            "illuminate/view": "5.4.*",
+            "php": ">=5.6.4"
+        },
+        "require-dev": {
+            "illuminate/database": "5.4.*",
+            "mockery/mockery": "~0.9.4",
+            "phpunit/phpunit": "~5.4"
+        },
+        "time": "2017-01-26 19:27:05",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Collective\\Html\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylorotwell@gmail.com"
+            },
+            {
+                "name": "Adam Engebretson",
+                "email": "adam@laravelcollective.com"
+            }
+        ],
+        "description": "HTML and Form Builders for the Laravel Framework",
+        "homepage": "http://laravelcollective.com"
+    },
+    {
+        "name": "caouecs/laravel-lang",
+        "version": "3.0.25",
+        "version_normalized": "3.0.25.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/caouecs/Laravel-lang.git",
+            "reference": "4787a876ec8234f5e8fa8c0b2aee400d5732d631"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/4787a876ec8234f5e8fa8c0b2aee400d5732d631",
+            "reference": "4787a876ec8234f5e8fa8c0b2aee400d5732d631",
+            "shasum": ""
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^1.10"
+        },
+        "suggest": {
+            "overtrue/laravel-lang": "Command to add languages in your project"
+        },
+        "time": "2017-03-22 16:40:16",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "caouecs",
+                "email": "caouecs@caouecs.net"
+            }
+        ],
+        "description": "Languages for Laravel",
+        "keywords": [
+            "lang",
+            "languages",
+            "laravel",
+            "lpm"
+        ]
+    },
+    {
+        "name": "overtrue/laravel-lang",
+        "version": "3.0.3",
+        "version_normalized": "3.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/overtrue/laravel-lang.git",
+            "reference": "e8ec3e6ca054295bc781791596d104b00b22e505"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/overtrue/laravel-lang/zipball/e8ec3e6ca054295bc781791596d104b00b22e505",
+            "reference": "e8ec3e6ca054295bc781791596d104b00b22e505",
+            "shasum": ""
+        },
+        "require": {
+            "caouecs/laravel-lang": "~3.0"
+        },
+        "time": "2017-02-14 10:03:14",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Overtrue\\LaravelLang\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "overtrue",
+                "email": "anzhengchao@gmail.com"
+            }
+        ],
+        "description": "List of 52 languages for Laravel 5",
+        "keywords": [
+            "languages",
+            "laravel",
+            "overtrue"
+        ]
+    },
+    {
+        "name": "symfony/dom-crawler",
+        "version": "v3.1.10",
+        "version_normalized": "3.1.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/dom-crawler.git",
+            "reference": "7eede2a901a19928494194f7d1815a77b9a473a0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/7eede2a901a19928494194f7d1815a77b9a473a0",
+            "reference": "7eede2a901a19928494194f7d1815a77b9a473a0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9",
+            "symfony/polyfill-mbstring": "~1.0"
+        },
+        "require-dev": {
+            "symfony/css-selector": "~2.8|~3.0"
+        },
+        "suggest": {
+            "symfony/css-selector": ""
+        },
+        "time": "2017-01-21 17:13:55",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\DomCrawler\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony DomCrawler Component",
+        "homepage": "https://symfony.com"
     }
 ]
