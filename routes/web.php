@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+//     includeRouteFiles(__DIR__.'/Frontend/');
+// });
+
+
+// Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
+//     includeRouteFiles(__DIR__.'/Backend/');
+// });
+
+Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+    includeRouteFiles(__DIR__.'/Backend/');
+});
+
