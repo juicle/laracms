@@ -36,6 +36,11 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
+        'admin' => [
+            'auth',
+            'timeout',
+        ],
+
         'api' => [
             'throttle:60,1',
             'bindings',
@@ -56,5 +61,9 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'timeout'    => \App\Http\Middleware\SessionTimeout::class,
+
+        'access.routeNeedsRole'       => \App\Http\Middleware\RouteNeedsRole::class,
+        'access.routeNeedsPermission' => \App\Http\Middleware\RouteNeedsPermission::class,
     ];
 }

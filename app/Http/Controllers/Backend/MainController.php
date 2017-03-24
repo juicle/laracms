@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Events\Backend\User\UserLoggedIn;
 
 class MainController extends Controller{
     
@@ -12,6 +13,10 @@ class MainController extends Controller{
 
     public function index(){
         return view('backend.main');
+    }
+
+    public function redirectPath(){
+        return route('admin.main');
     }
 
     public function showLoginForm(){
@@ -34,18 +39,15 @@ class MainController extends Controller{
 
     protected function validateLogin(Request $request){
         $this->validate($request, [
-            $this->username() => 'required', 'userpwd' => 'required',
-        ],[],[$this->username() =>'用户名','userpwd' => '密码']);
+            $this->username() => 'required', 'password' => 'required',
+        ],[],[$this->username() =>'用户名','password' => '密码']);
     }
 
     public function username(){
-        return 'username';
+        return 'name';
     }
 
-    protected function credentials(Request $request)
-    {
-        return $request->only($this->username(), 'userpwd');
-    }
+
 
     public function logout(){
         

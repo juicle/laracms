@@ -7,9 +7,9 @@
   {{ Form::open(['route' => 'admin.login', 'class' => 'form-signin','autocomplete' => 'off']) }}
     <h2 class="form-signin-heading">管理员登录</h2>
     {{ Form::label('emuserNameail', '用户名', ['class' => 'sr-only']) }}
-    {{ Form::input('text', 'username', null, ['class' => 'form-control', 'placeholder' => '请输入用户名', 'autocomplete'=>'off', 'maxlength'=>'10', 'id'=>'userName']) }}
+    {{ Form::input('text', 'name', null, ['class' => 'form-control', 'placeholder' => '请输入用户名', 'autocomplete'=>'off', 'maxlength'=>'10', 'id'=>'userName']) }}
     {{ Form::label('userPwd', '密码', ['class' => 'sr-only']) }}
-    {{ Form::input('password', 'userpwd', null, ['class' => 'form-control', 'placeholder' => '请输入密码', 'autocomplete'=>'off', 'maxlength'=>'18', 'id'=>'userPwd']) }}
+    {{ Form::input('password', 'password', null, ['class' => 'form-control', 'placeholder' => '请输入密码', 'autocomplete'=>'off', 'maxlength'=>'18', 'id'=>'userPwd']) }}
     {{ Form::submit(null, ['class' => 'btn btn-lg btn-primary btn-block','id'=>'signinSubmit']) }}
   {{ Form::close() }}
   <div class="footer">

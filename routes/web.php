@@ -24,7 +24,7 @@ Route::get('/', function () {
 //     includeRouteFiles(__DIR__.'/Backend/');
 // });
 
-Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
     includeRouteFiles(__DIR__.'/Backend/');
 });
 
