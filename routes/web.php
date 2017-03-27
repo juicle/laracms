@@ -24,7 +24,10 @@ Route::get('/', function () {
 //     includeRouteFiles(__DIR__.'/Backend/');
 // });
 
-Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
+Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.'], function () {
     includeRouteFiles(__DIR__.'/Backend/');
+    Route::get('/',function(){
+       return redirect()->route('admin.login');
+    });
 });
 

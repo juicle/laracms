@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Helpers\Auth\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Events\Backend\User\UserLoggedIn;
+use App\Events\Backend\User\UserLoggedOut;
 
 class MainController extends Controller{
     
@@ -49,7 +51,13 @@ class MainController extends Controller{
 
 
 
-    public function logout(){
-        
+    public function logout(Request $request){
+        app()->make(Auth::class)->flushTempSession();
+        event(new UserLoggedOut($this->guard()->user()));
+        $this->guard()->logout();
+        $request->session()->flush();
+        $request->session()->regenerate();
+
+        return redirect('/admin');
     }
 }
