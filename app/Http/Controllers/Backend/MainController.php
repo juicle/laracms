@@ -26,13 +26,6 @@ class MainController extends Controller{
     }
 
     protected function authenticated(Request $request, $user){
-        if (! $user->isConfirmed()) {
-            access()->logout();
-            throw new GeneralException(trans('exceptions.frontend.auth.confirmation.resend', ['user_id' => $user->id]));
-        } elseif (! $user->isActive()) {
-            access()->logout();
-            throw new GeneralException(trans('exceptions.frontend.auth.deactivated'));
-        }
 
         event(new UserLoggedIn($user));
 
@@ -48,8 +41,6 @@ class MainController extends Controller{
     public function username(){
         return 'name';
     }
-
-
 
     public function logout(Request $request){
         app()->make(Auth::class)->flushTempSession();

@@ -2,27 +2,16 @@
 
 namespace App\Models\User;
 
-use Illuminate\Notifications\Notifiable;
-use App\Models\User\Traits\UserAccess;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\User\Traits\Scope\UserScope;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Models\User\Traits\UserSendPasswordReset;
-use App\Models\User\Traits\Attribute\UserAttribute;
-use App\Models\User\Traits\Relationship\UserRelationship;
+
 
 /**
  * Class User.
  */
 class User extends Authenticatable
 {
-    use UserScope,
-        UserAccess,
-        Notifiable,
-        SoftDeletes,
-        UserAttribute,
-        UserRelationship,
-        UserSendPasswordReset;
+    
 
     /**
      * The database table used by the model.

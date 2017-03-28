@@ -58,43 +58,16 @@ abstract class BaseRepository
         return $deleted;
     }
 
-    /**
-     * @param Model $model
-     *
-     * @return bool|null
-     */
-    public function forceDelete(Model $model)
-    {
-        $deleted = $model->forceDelete();
-
-        if ($deleted) {
-            app('cache')->flush();
-        }
-
-        return $deleted;
-    }
-
-    /**
-     * @param Model $model
-     *
-     * @return bool|null
-     */
-    public function restore(Model $model)
-    {
-        $deleted = $model->restore();
-
-        if ($deleted) {
-            app('cache')->flush();
-        }
-
-        return $deleted;
-    }
 
     /**
      * @return mixed
      */
-    protected function query()
+    protected function query($pageSize=100)
     {
+        return call_user_func(static::MODEL.'::paginate',$pageSize);
+    }
+
+    protected function queryAll(){
         return call_user_func(static::MODEL.'::query');
     }
 }

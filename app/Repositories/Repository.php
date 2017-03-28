@@ -10,9 +10,9 @@ abstract class Repository extends BaseRepository
     /**
      * @return mixed
      */
-    public function getAll()
+    public function getAll($pageSize)
     {
-        return $this->query()->get();
+        return $this->query($pageSize);
     }
 
     /**
@@ -20,7 +20,7 @@ abstract class Repository extends BaseRepository
      */
     public function getCount()
     {
-        return $this->query()->count();
+        return $this->queryAll()->count();
     }
 
     /**
