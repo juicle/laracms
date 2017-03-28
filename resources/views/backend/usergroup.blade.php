@@ -1,5 +1,4 @@
 @extends('backend.layouts.app')
-
 @section('body')
 <section class="container-fluid">
   @include('backend.include.header')
@@ -44,42 +43,4 @@
   </div>
 </section>
 @include('backend.include.modal')
-<script src="/dist/js/bootstrap.min.js"></script> 
-<script src="/dist/js/admin-scripts.js"></script> 
-<script>
-$(function () {
-    $("#main table tbody tr td a").click(function () {
-        var name = $(this);
-        var id = name.attr("rel"); //对应id   
-        if (name.attr("name") === "see") {
-            $.ajax({
-                type: "POST",
-                url: "/User/see",
-                data: "id=" + id,
-                cache: false, //不缓存此页面   
-                success: function (data) {
-                    var data = JSON.parse(data);
-					$('#truename').val(data.truename);
-					$('#username').val(data.username);
-					$('#usertel').val(data.usertel);
-					$('#userid').val(data.userid);
-                    $('#seeUser').modal('show');
-                }
-            });
-        } else if (name.attr("name") === "delete") {
-            if (window.confirm("此操作不可逆，是否确认？")) {
-                $.ajax({
-                    type: "POST",
-                    url: "/User/delete",
-                    data: "id=" + id,
-                    cache: false, //不缓存此页面   
-                    success: function (data) {
-                        window.location.reload();
-                    }
-                });
-            };
-        };
-    });
-});
-</script>
 @endsection
