@@ -50,7 +50,7 @@ class SessionTimeout
                 $email = $request->user()->email;
                 access()->logout();
 
-                return redirect()->route('frontend.auth.login')->withFlashWarning('timeout'.$this->timeout / 60 .'out')->withInput(compact('email'))->withCookie($cookie);
+                return redirect()->route('admin.login')->withFlashWarning('登录超时')->withInput(compact('email'))->withCookie($cookie);
             }
 
             $isLoggedIn ? $this->session->put('lastActivityTime', time()) : $this->session->forget('lastActivityTime');

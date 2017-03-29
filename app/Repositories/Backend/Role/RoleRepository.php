@@ -4,63 +4,24 @@ namespace App\Repositories\Backend\Role;
 
 use App\Models\Role\Role;
 use App\Repositories\Repository;
-use Illuminate\Support\Facades\DB;
 use App\Exceptions\GeneralException;
 use Illuminate\Database\Eloquent\Model;
 use App\Events\Backend\Role\RoleCreated;
 use App\Events\Backend\Role\RoleDeleted;
 use App\Events\Backend\Role\RoleUpdated;
+use Illuminate\Support\Facades\DB;
 
-/**
- * Class RoleRepository.
- */
 class RoleRepository extends Repository
 {
-    /**
-     * Associated Repository Model.
-     */
+    
     const MODEL = Role::class;
+    public $pageSize = 15;
 
-    /**
-     * @param string $order_by
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getAll($order_by = 'sort', $sort = 'asc')
+    public function getRoles()
     {
-        return $this->query()
-            ->with('users', 'permissions')
-            ->orderBy($order_by, $sort)
-            ->get();
+        return $this->getAll($this->pageSize);
     }
-
-    /**
-     * @param string $order_by
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getForDataTable($order_by = 'sort', $sort = 'asc')
-    {
-        return $this->query()
-            ->with('users', 'permissions')
-            ->orderBy($order_by, $sort)
-            ->select([
-                config('access.roles_table').'.id',
-                config('access.roles_table').'.name',
-                config('access.roles_table').'.all',
-                config('access.roles_table').'.sort',
-            ]);
-    }
-
-    /**
-     * @param array $input
-     *
-     * @throws GeneralException
-     *
-     * @return bool
-     */
+    
     public function create(array $input)
     {
         if ($this->query()->where('name', $input['name'])->first()) {
@@ -102,10 +63,8 @@ class RoleRepository extends Repository
                             }
                         }
                     }
-
                     $role->attachPermissions($permissions);
                 }
-
                 event(new RoleCreated($role));
 
                 return true;
@@ -115,14 +74,6 @@ class RoleRepository extends Repository
         });
     }
 
-    /**
-     * @param Model $role
-     * @param  $input
-     *
-     * @throws GeneralException
-     *
-     * @return bool
-     */
     public function update(Model $role, array $input)
     {
         //See if the role has all access, administrator always has all access
@@ -182,13 +133,6 @@ class RoleRepository extends Repository
         });
     }
 
-    /**
-     * @param Model $role
-     *
-     * @throws GeneralException
-     *
-     * @return bool
-     */
     public function delete(Model $role)
     {
         //Would be stupid to delete the administrator role
@@ -214,16 +158,5 @@ class RoleRepository extends Repository
             throw new GeneralException(trans('exceptions.backend.access.roles.delete_error'));
         });
     }
-
-    /**
-     * @return mixed
-     */
-    public function getDefaultUserRole()
-    {
-        if (is_numeric(config('access.users.default_role'))) {
-            return $this->query()->where('id', (int) config('access.users.default_role'))->first();
-        }
-
-        return $this->query()->where('name', config('access.users.default_role'))->first();
-    }
+    
 }
