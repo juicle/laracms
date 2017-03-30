@@ -37,8 +37,8 @@ class UserGroupController extends Controller{
         return redirect()->route('admin.user.rolelist')->withFlashSuccess(trans('alerts.backend.roles.created'));
     }
 
-    public function edit(){
-        
+    public function edit(Role $role, ManageRoleRequest $request){
+        dd($role);
     }
 
     public function update(){
@@ -46,9 +46,10 @@ class UserGroupController extends Controller{
     }
 
     public function destroy(Role $role, ManageRoleRequest $request){
+        dd($role);
         $this->roles->delete($role);
-
-        return redirect()->route('admin.access.role.index')->withFlashSuccess(trans('alerts.backend.roles.deleted'));
+        return ["status"=>1,"msg"=>"success"];
+        //return redirect()->route('admin.user.rolelist')->withFlashSuccess(trans('alerts.backend.roles.deleted'));
     }
 
 }

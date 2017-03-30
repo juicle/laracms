@@ -34,7 +34,7 @@
                 @endif
                 </td>
                 <td>{{ $role->sort }}</td>
-                <td><a href="/admin/usergroup/edit">修改</a> <a rel="1" name="delete">删除</a> <a href="/User/checked/id/1/action/n">禁用</a></td>
+                <td><a href="/admin/usergroup/edit">修改</a> <a rel="{{ $role->id }}" name="delete">删除</a> <a href="/User/checked/id/1/action/n">禁用</a></td>
               </tr>
               @endforeach
             </tbody>
@@ -44,4 +44,31 @@
   </div>
 </section>
 @include('backend.include.modal')
+<script src="/dist/js/bootstrap.min.js"></script> 
+<script src="/dist/js/admin-scripts.js"></script> 
+<script>
+//是否确认删除
+$(function(){   
+	$("#main table tbody tr td a").click(function(){
+		var name = $(this);
+		var id = name.attr("rel"); //对应id  
+		if (event.srcElement.outerText == "删除") 
+		{
+			if(window.confirm("此操作不可逆，是否确认？"))
+			{
+				$.ajax({
+					type: "get",
+					url: "/admin/usergroup/delete",
+					data: "id=" + id,
+					cache: false, //不缓存此页面   
+					success: function (data) {
+                        console.log(data)
+						//window.location.reload();
+					}
+				});
+			};
+		};
+	});   
+});
+</script>
 @endsection
