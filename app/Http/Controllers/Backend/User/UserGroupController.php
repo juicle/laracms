@@ -3,53 +3,84 @@
 namespace App\Http\Controllers\Backend\User;
 
 use App\Models\Role\Role;
-use App\Http\Requests\Backend\Role\StoreRoleRequest;
-use App\Http\Requests\Backend\Role\ManageRoleRequest;
-use App\Http\Requests\Backend\Role\UpdateRoleRequest;
-use App\Repositories\Backend\Role\RoleRepository;
-use App\Repositories\Backend\Permission\PermissionRepository;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UserGroupController extends Controller{
-    
-    protected $roles;
-    protected $permissions;
-
-    public function __construct(RoleRepository $roles, PermissionRepository $permissions)
+class UserGroupController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $this->roles = $roles;
-        $this->permissions = $permissions;
+        //
     }
 
-    public function list(){
-        return view('backend.usergroup')
-           ->withRoles($this->roles->getRoles())
-           ->withCount($this->roles->getCount());
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
-    public function create(){
-        return view('backend.addusergroup')
-           ->withPermissions($this->permissions->getAll(100));
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
     }
 
-    public function store(StoreRoleRequest $request){
-        $this->roles->create($request->all());
-        return redirect()->route('admin.user.rolelist')->withFlashSuccess(trans('alerts.backend.roles.created'));
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Role\Role  $role
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Role $role)
+    {
+        //
     }
 
-    public function edit(Role $role, ManageRoleRequest $request){
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Role\Role  $role
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Role $role)
+    {
         dd($role);
     }
 
-    public function update(){
-
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Role\Role  $role
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Role $role)
+    {
+        //
     }
 
-    public function destroy(Role $role, ManageRoleRequest $request){
-        dd($role);
-        $this->roles->delete($role);
-        return ["status"=>1,"msg"=>"success"];
-        //return redirect()->route('admin.user.rolelist')->withFlashSuccess(trans('alerts.backend.roles.deleted'));
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Role\Role  $role
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Role $role)
+    {
+        //
     }
-
 }

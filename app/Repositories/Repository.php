@@ -30,6 +30,6 @@ abstract class Repository extends BaseRepository
      */
     public function find($id)
     {
-        return $this->query()->find($id);
+        return $this->queryAll()->find($id);
     }
 }
